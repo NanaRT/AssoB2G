@@ -1,0 +1,4 @@
+accueil:
+    path:     /
+    defaults: { _controller: AssoB2GBundle:Default:accueil }
+ 

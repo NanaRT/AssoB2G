@@ -1,0 +1,17 @@
+img
+{
+	width:100%;
+}
+#logo
+{
+	width:20%;
+	display:inline-block;
+	margin-left:20%;
+	margin-top:10%;
+}
+#text
+{
+	width:35%;
+	display:inline-block;
+	margin-right:20%;
+}

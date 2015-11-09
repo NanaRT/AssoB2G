@@ -1,0 +1,3 @@
+AssoB2G:
+    resource: "@AssoB2GBundle/Resources/config/routing.yml"
+    prefix:   /
