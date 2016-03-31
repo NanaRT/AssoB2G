@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{%block head%}
+	<link rel="stylesheet" href="{{ asset('bundles/assob2g/css/3-col-portfolio.css')  }}" />
+{%endblock%}
+
+{% block body %}
+    <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="tagline">{{entity.nom}}</h1>
+                    <h4> Commanditaire de l'événement : {{entity.commanditaire}} </h4>
+                </div>
+                <div class="col-lg-2">
+	                <h3>Dates</h3>
+	                <p><span class="glyphicon glyphicon-time"></span> {{ entity.dateDebut|date("d/m/Y") }} au {{ entity.dateFin|date("d/m/Y") }} </p>
+                </div>
+                <div class="col-lg-2">
+                	<h3>Lieu</h3>
+                	<p><i class="fa fa-map-marker"></i> {{entity.lieu}} </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <h2>Description de l'événement</h2>
+                <p>
+                    {%if entity.description%}
+                    	{{entity.description}}
+                    {%endif%}
+                </p>
+                <p>
+                	{#
+                    <a class="btn btn-default btn-lg" href="#">Call to Action &raquo;</a>
+                    #}
+                </p>
+            </div>
+            <div class="col-sm-2">
+                <img class="img-responsive" src="{{ asset('bundles/assob2g/image/Evenement/'~entity.systName~'/logo.jpg') }}" alt="Logo {{entity.nom}}"/>
+            </div>
+        </div>
+
+        <hr>
+		
+		{%if entity.role%}
+	        <div class="row">
+	            <div class="col-sm-12">
+	            	
+	            	<br>
+	            	<h2>Le role de l'Association sur cet événement</h2>
+	            	<p>{{entity.role}}</p>
+	            </div>
+	        </div>
+	    {%endif%}
+	    <hr>
+	    {%if entity.membre%}
+	        <div class="row">
+	            <div class="col-sm-12">
+	            	<h2>Membres présents</h2>
+	            	<br>
+	            	{%for membre in entity.membre%}
+	            		<div class="col-xs-1">
+	            			{{include('AssoB2GBundle:Membre:include.html.twig')}}
+	            		</div>
+	            	{%endfor%}
+	            </div>
+	        </div>
+	    {%endif%}
+{% endblock %}

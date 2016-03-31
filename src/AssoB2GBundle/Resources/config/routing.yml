@@ -1,4 +1,23 @@
+asso_b2_g_lien:
+    resource: "@AssoB2GBundle/Resources/config/routing/lien.yml"
+    prefix:   /lien
+
+asso_b2g_evenement:
+    resource: "@AssoB2GBundle/Resources/config/routing/evenement.yml"
+    prefix:   /evenement
+
+asso_b2g_membre:
+    resource: "@AssoB2GBundle/Resources/config/routing/membre.yml"
+    prefix:   /membre
+
 accueil:
     path:     /
     defaults: { _controller: AssoB2GBundle:Default:accueil }
- 
+
+contact:
+    path:     /contact
+    defaults: { _controller: AssoB2GBundle:Default:contact }
+    
+apropos:
+    path:     /apropos
+    defaults: { _controller: AssoB2GBundle:Default:apropos }

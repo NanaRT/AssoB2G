@@ -1,0 +1,30 @@
+evenement:
+    path:     /
+    defaults: { _controller: "AssoB2GBundle:Evenement:index" }
+
+evenement_show:
+    path:     /{id}/show
+    defaults: { _controller: "AssoB2GBundle:Evenement:show" }
+
+evenement_new:
+    path:     /new
+    defaults: { _controller: "AssoB2GBundle:Evenement:new" }
+
+evenement_create:
+    path:     /create
+    defaults: { _controller: "AssoB2GBundle:Evenement:create" }
+    methods:  POST
+
+evenement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AssoB2GBundle:Evenement:edit" }
+
+evenement_update:
+    path:     /{id}/update
+    defaults: { _controller: "AssoB2GBundle:Evenement:update" }
+    methods:  [POST, PUT]
+
+evenement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AssoB2GBundle:Evenement:delete" }
+    methods:  [POST, DELETE]

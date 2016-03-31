@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+	<br><br><br>
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-2">
+			</div>
+	        <div class="col-lg-8">
+			    <h1>Evenement edit</h1>
+			
+				{% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+			    {{ form(edit_form) }}
+			
+			        <ul class="record_actions">
+			    <li>
+			        <a href="{{ path('evenement') }}">
+			            Back to the list
+			        </a>
+			    </li>
+			    <li>{{ form(delete_form) }}</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

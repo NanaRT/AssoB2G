@@ -1,0 +1,27 @@
+AssoB2GBundle\Entity\Membre:
+    type: entity
+    table: null
+    repositoryClass: AssoB2GBundle\Entity\MembreRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        prenom:
+            type: string
+            length: 255
+        poste:
+            type: string
+            length: 255
+            nullable: true
+    lifecycleCallbacks: {  }
+    
+    manyToMany:
+        evenement:
+          targetEntity: Evenement
+          mappedBy: membre

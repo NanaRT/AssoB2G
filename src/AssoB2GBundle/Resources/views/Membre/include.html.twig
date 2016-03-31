@@ -1,0 +1,6 @@
+<img class="img-responsive" src="{{ asset('bundles/assob2g/image/Membre/'~membre.prenom~'_'~membre.nom~'.jpg') }}" alt="{{membre.prenom}} {{membre.nom}}">
+
+{{membre.prenom}} {{membre.nom}} 
+{%if membre.poste%}
+	- {{membre.poste}}
+{%endif%}

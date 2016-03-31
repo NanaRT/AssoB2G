@@ -1,0 +1,30 @@
+lien:
+    path:     /
+    defaults: { _controller: "AssoB2GBundle:Lien:index" }
+
+lien_show:
+    path:     /{id}/show
+    defaults: { _controller: "AssoB2GBundle:Lien:show" }
+
+lien_new:
+    path:     /new
+    defaults: { _controller: "AssoB2GBundle:Lien:new" }
+
+lien_create:
+    path:     /create
+    defaults: { _controller: "AssoB2GBundle:Lien:create" }
+    methods:  POST
+
+lien_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AssoB2GBundle:Lien:edit" }
+
+lien_update:
+    path:     /{id}/update
+    defaults: { _controller: "AssoB2GBundle:Lien:update" }
+    methods:  [POST, PUT]
+
+lien_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AssoB2GBundle:Lien:delete" }
+    methods:  [POST, DELETE]

@@ -1,0 +1,49 @@
+AssoB2GBundle\Entity\Evenement:
+    type: entity
+    table: null
+    repositoryClass: AssoB2GBundle\Entity\EvenementRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        systName:
+            type: string
+            length: 255
+        commanditaire:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 1500
+            nullable: true
+        role:
+            type: string
+            length: 1500
+            nullable: true
+        dateDebut:
+            type: datetime
+        dateFin:
+            type: datetime
+        lieu:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+    
+    manyToMany:
+        membre:
+          targetEntity: Membre
+          inversedBy: evenement
+          joinTable:
+            name: evenement_membre
+            joinColumns:
+              evenement_id:
+                referencedColumnName: id
+            inverseJoinColumns:
+              membre_id:
+                referencedColumnName: id

@@ -1,0 +1,30 @@
+membre:
+    path:     /
+    defaults: { _controller: "AssoB2GBundle:Membre:index" }
+
+membre_show:
+    path:     /{id}/show
+    defaults: { _controller: "AssoB2GBundle:Membre:show" }
+
+membre_new:
+    path:     /new
+    defaults: { _controller: "AssoB2GBundle:Membre:new" }
+
+membre_create:
+    path:     /create
+    defaults: { _controller: "AssoB2GBundle:Membre:create" }
+    methods:  POST
+
+membre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AssoB2GBundle:Membre:edit" }
+
+membre_update:
+    path:     /{id}/update
+    defaults: { _controller: "AssoB2GBundle:Membre:update" }
+    methods:  [POST, PUT]
+
+membre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AssoB2GBundle:Membre:delete" }
+    methods:  [POST, DELETE]
